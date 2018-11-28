@@ -10,7 +10,7 @@ CREATE TABLE municipio (
 CREATE TABLE localidad (
   clave INT(11) NOT NULL PRIMARY KEY,
   descripcion VARCHAR (60),
-  id_localidad INT(11) NOT NULL REFERENCES localidad (clave)
+  id_municipio INT(11) NOT NULL REFERENCES municipio (clave)
 );
 
 CREATE TABLE familia_linguistica (
