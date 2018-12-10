@@ -15,7 +15,7 @@
         </tr>
        </thead>
     <tbody>
-    <?php foreach ($this->model->Listar() as $r) : ?>
+    <?php foreach ($this->model->Listar($_GET['id']) as $r) : ?>
         <tr>
             <td><?php echo $r->descripcion; ?></td>            
             <td><?php echo $r->municipio; ?></td>

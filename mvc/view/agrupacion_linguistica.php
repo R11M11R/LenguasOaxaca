@@ -1,9 +1,5 @@
 <h1 class="page-header">Lenguas Indígenas de Oaxaca</h1>
 
-<!--<div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=Agrupacion_Linguistica&a=Crud">Nuevo Agrupacion_Linguistica</a>
-</div>-->
-
 <table class="table table-striped">
     <thead>
         <tr>
@@ -14,15 +10,14 @@
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($this->model->Listar() as $r) : ?>
-        <tr>
-            <td><?php echo $r->descripcion; ?></td>
-            
-  <td><?php echo $r->familia_linguistica; ?> </td>
-
-            <td>
-                <a href="?c=variante_linguistica&a=Crud&id=<?php echo $r->id; ?>">Acceder</a>
-            </td>
+    
+    <?php foreach ($this->model->Listar() as $agrupacion) : ?>
+    <tr>
+        <td><?php echo $agrupacion->descripcion; ?></td>
+        <td><?php echo $agrupacion->familia_linguistica; ?> </td>
+        <td>
+            <a href="?c=localidad&a=Crud&id=<?php echo $agrupacion->id; ?>">Localidades perteneciente</a>
+        </td>
             
         </tr>
     <?php endforeach; ?>

@@ -1,6 +1,5 @@
 <?php
 require_once 'model/agrupacion_linguistica.php';
-//require_once 'model/variante_linguistica.php';
 
 class Agrupacion_LinguisticaController
 {
@@ -19,24 +18,21 @@ class Agrupacion_LinguisticaController
         require_once 'view/footer.php';
     }
 
-    public function Crud()
+    /*//En caso de agregar mas AgrupacionesLingüisticas
+    public function Crud() 
     {
         $alm = new Agrupacion_Linguistica();
         //$this->model = new Variante_Linguistica();
 
         if (isset($_REQUEST['id'])) {//where id = xx            
-            $alm = $this->model->Obtener($_REQUEST['id']);
-            /*echo"<script type='text/javascript'>
-            alert('$alm->id');            
-            </script>";*/
+            $alm = $this->model->Obtener($_REQUEST['id']);            
         }
         
         require_once 'view/header.php';
-        require_once 'view/variante_linguistica.php';
+        //require_once 'view/localidad.php';
         require_once 'view/footer.php';
     }
-
-    /*public function Guardar()
+    public function Guardar()
     {
         $alm = new AgrupacionLinguistica();
 

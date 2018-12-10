@@ -23,12 +23,16 @@ class Agrupacion_Linguistica
 			$result = array();
 			
 			$stm = $this->pdo->prepare(
-				"SELECT al.id,
+				"SELECT
+				al.id,
 				al.descripcion,
-				fl.id as id_familia_linguistica,
-				fl.descripcion as familia_linguistica 
-				FROM agrupacion_linguistica as al 
-				inner join familia_linguistica as fl on al.id_familia_linguistica=fl.id
+				fl.id AS id_familia_linguistica,
+				fl.descripcion AS familia_linguistica
+				FROM
+				agrupacion_linguistica AS al
+				INNER JOIN familia_linguistica AS fl
+				ON
+				al.id_familia_linguistica = fl.id;
 				");
 
 			$stm->execute();
@@ -42,12 +46,9 @@ class Agrupacion_Linguistica
 	public function Obtener($id)
 	{
 		try {
-			$stm = $this->pdo
-				->prepare("SELECT * FROM agrupacion_linguistica WHERE id = $id");
-
+			$stm = $this->pdo->prepare("SELECT * FROM agrupacion_linguistica WHERE id = $id");
 
 			$stm->execute(array($id));
-			//$stm->execute(array());
 			return $stm->fetch(PDO::FETCH_OBJ);
 		} catch (Exception $e) {
 			die($e->getMessage());
@@ -90,9 +91,5 @@ class Agrupacion_Linguistica
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}
-	}
-	public function sqlData()
-	{
-		return "SELECT al.id,al.descripcion,fl.id as id_familia_linguistica,fl.descripcion as familia_linguistica FROM agrupacion_linguistica as al inner join familia_linguistica as fl on al.id_familia_linguistica=fl.id";
 	}
 }

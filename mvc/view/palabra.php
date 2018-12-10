@@ -17,7 +17,7 @@
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($this->model->Listar() as $r) : ?>
+    <?php foreach ($this->model->Listar($_GET['id']) as $r) : ?>
         <tr>
         <!--[mp3]  <source src="horse.mp3" type="audio/mpeg"> -->
             <td><?php echo $r->escritura; ?></td>

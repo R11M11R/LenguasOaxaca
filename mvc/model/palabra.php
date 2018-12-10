@@ -23,13 +23,16 @@ class Palabra
 		}
 	}
 
-	public function Listar()
+	public function Listar($id_localidad)
 	{
 		try
 		{
 			$result = array();
 			
-			$stm = $this->pdo->prepare("SELECT p.id,p.escritura,p.pronunciacion,l.clave as id_localidad, l.descripcion as localidad, c.id as id_clasificacion,c.descripcion as clasificacion,s.id as id_significado,s.escritura as significado FROM palabras as p INNER JOIN localidad as l on p.id_localidad=l.clave INNER JOIN clasificacion as c on p.id_clasificacion=c.id INNER JOIN significado as s on p.id_significado=s.id;");
+			$stm = $this->pdo->prepare(
+				"SELECT p.id,p.escritura,p.pronunciacion,l.clave as id_localidad, l.descripcion as localidad, c.id as id_clasificacion,c.descripcion as clasificacion,s.id as id_significado,s.escritura as significado FROM palabras as p INNER JOIN localidad as l on p.id_localidad=l.clave INNER JOIN clasificacion as c on p.id_clasificacion=c.id INNER JOIN significado as s on p.id_significado=s.id
+				WHERE l.clave=$id_localidad;
+				");
 			$stm->execute();
 
 			return $stm->fetchAll(PDO::FETCH_OBJ);
