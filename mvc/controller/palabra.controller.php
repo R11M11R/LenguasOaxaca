@@ -27,7 +27,7 @@ class PalabraController
         }
 
         require_once 'view/header.php';
-        require_once 'view/palabra.php';
+        require_once 'view/palabra-editar.php';
         require_once 'view/footer.php';
     }
 

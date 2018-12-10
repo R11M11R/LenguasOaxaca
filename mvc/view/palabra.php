@@ -1,7 +1,7 @@
 <h1 class="page-header">Palabras</h1>
 
 <div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=Palabra&a=Crud">Nuevo Palabra</a>
+    <a class="btn btn-primary" href="?c=palabra&a=Crud">Agregar Palabra</a>
 </div>
 
 <table class="table table-striped">
@@ -29,7 +29,7 @@
             <td><?php echo $r->significado; ?></td>
             <td><?php echo $r->localidad; ?></td>
             <td>
-                <a href="?c=Palabra&a=Crud&id=<?php echo $r->id; ?>">Editar</a>
+                <a href="?c=palabra-editar&a=Crud&id=<?php echo $r->id; ?>">Editar</a>
             </td>
             <td>
                 <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=Palabra&a=Eliminar&id=<?php echo $r->id; ?>">Eliminar</a>

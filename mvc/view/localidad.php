@@ -1,9 +1,5 @@
 <h1 class="page-header">Localidad</h1>
 
-<!--<div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=Localidad&a=Crud">Nuevo Localidad</a>
-</div>-->
-
 <table class="table table-striped">
     <thead>
         <tr>
@@ -21,7 +17,7 @@
             <td><?php echo $r->municipio; ?></td>
             <td><?php echo $r->variante_linguistica; ?></td>
             <td>
-                <a href="?c=palabra&a=Crud&id=<?php echo $r->clave; ?>">Acceder</a>
+                <a href="?c=palabra&id=<?php echo $r->clave; ?>">Reforzar Palabras</a>
             </td>
         </tr>
     <?php endforeach; ?>
