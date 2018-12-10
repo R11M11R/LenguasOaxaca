@@ -2,7 +2,9 @@
                 <div class="col-xs-12">
                     <hr />
                     <footer class="text-center well">
-                        <p>Visitanos en : <a href="https://www.facebook.com/Sh%C3%AD-l%C3%A1-ni-269841997037843/">Facebook</a></p>
+                        <p>Visitanos en : </p>
+                        <a href="https://www.facebook.com/Sh%C3%AD-l%C3%A1-ni-269841997037843/">Facebook</a>
+                        <a href="https://www.youtube.com/channel/UCefmI6c3hDNr0Ag8HgVu7xw">Youtube</a>                        
                     </footer>                
                 </div>    
             </div>

@@ -1,4 +1,4 @@
-<h1 class="page-header">Palabras</h1>
+<h1 class="page-header">Conoce las palabras</h1>
 
 <div class="well well-sm text-right">
     <a class="btn btn-primary" href="?c=palabra&a=Crud">Agregar Palabra</a>
