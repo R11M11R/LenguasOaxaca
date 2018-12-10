@@ -29,7 +29,7 @@ class Variante_LinguisticaController
         }
 
         require_once 'view/header.php';
-        require_once 'view/localidad.php';
+        require_once 'view/variante_linguistica.php';
         require_once 'view/footer.php';
     }
 

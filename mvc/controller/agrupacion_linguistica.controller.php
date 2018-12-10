@@ -26,9 +26,9 @@ class Agrupacion_LinguisticaController
 
         if (isset($_REQUEST['id'])) {//where id = xx            
             $alm = $this->model->Obtener($_REQUEST['id']);
-            echo"<script type='text/javascript'>
+            /*echo"<script type='text/javascript'>
             alert('$alm->id');            
-            </script>";
+            </script>";*/
         }
         
         require_once 'view/header.php';

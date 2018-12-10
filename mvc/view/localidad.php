@@ -21,7 +21,7 @@
             <td><?php echo $r->municipio; ?></td>
             <td><?php echo $r->variante_linguistica; ?></td>
             <td>
-                <a href="?c=Localidad&a=Crud&id=<?php echo $r->clave; ?>">Acceder</a>
+                <a href="?c=palabra&a=Crud&id=<?php echo $r->clave; ?>">Acceder</a>
             </td>
         </tr>
     <?php endforeach; ?>

@@ -1,7 +1,3 @@
-<script type='text/javascript'>
-            alert('<?php $alm->descripcion ?>');
-</script>
-            
 <h1 class="page-header">Lenguas Indígenas de Oaxaca</h1>
 
 <!--<div class="well well-sm text-right">
@@ -25,7 +21,7 @@
   <td><?php echo $r->agrupacion_linguistica; ?> </td>
 
             <td>
-                <a href="?c=Variante_Linguistica&a=Crud&id=<?php echo $r->id; ?>">Acceder</a>
+                <a href="?c=localidad&a=Crud&id=<?php echo $r->id; ?>">Acceder</a>
             </td>
             
         </tr>
