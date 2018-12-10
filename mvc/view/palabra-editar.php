@@ -9,6 +9,43 @@
 
 <form id="frm-palabra" action="?c=palabra&a=Guardar" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo $_palabra->id; ?>" />
+    <?php
+    
+        echo " <table class='table'>";
+        try {
+            $mbd = new PDO('mysql:host=localhost;dbname=lenguas;charset=UTF8', "root", "");        
+            echo " Clasificacion : <select id='mySelect2' onchange='myFunction2()'>";
+        echo "<option value='-1'>Seleccione clasificación</option>";
+        foreach ($mbd->query('SELECT * from clasificacion') as $fila) {
+            echo "<option value='" . $fila[0].'-'.$fila[2] . "'>" . $fila[1] . "</option>";
+        }
+        echo "</select>";
+        }
+        catch (PDOException $e) {
+            print "¡Error!: " . $e->getMessage() . "<br/>";
+            die();
+        }
+        echo "</table>";    
+    ?>
+    <?php
+    
+    echo " <table class='table'>";
+    try {
+        $mbd = new PDO('mysql:host=localhost;dbname=lenguas;charset=UTF8', "root", "");        
+        echo " Significado : <select id='mySelect2' onchange='myFunction2()'>";
+    echo "<option value='-1'>Seleccione significado</option>";
+    foreach ($mbd->query('SELECT * from significado') as $fila) {
+        echo "<option value='" . $fila[0].'-'.$fila[2] . "'>" . $fila[1] . "</option>";
+    }
+    echo "</select>";
+    }
+    catch (PDOException $e) {
+        print "¡Error!: " . $e->getMessage() . "<br/>";
+        die();
+    }
+    echo "</table>";
+
+?>
     
     <div class="form-group">
         <label>escritura</label>
