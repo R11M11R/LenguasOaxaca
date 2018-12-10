@@ -2,6 +2,7 @@
                 <div class="col-xs-12">
                     <hr />
                     <footer class="text-center well">
+						<div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
                         <p>Visitanos en : <a href="https://www.facebook.com/Sh%C3%AD-l%C3%A1-ni-269841997037843/">Facebook</a></p>
                     </footer>                
                 </div>    
