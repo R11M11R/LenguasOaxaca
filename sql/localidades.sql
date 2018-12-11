@@ -6164,7 +6164,7 @@ INSERT INTO localidad VALUES (2264 , 'Santiago Quiavicuzas',125,051330);
 INSERT INTO localidad VALUES (3595 , 'Santiago Miramar',364,051404);
 INSERT INTO localidad VALUES (2263 , 'Asunción Lachixonase',125,051329);
 INSERT INTO localidad VALUES (3594 , 'El Carrizal',526,051404);
-INSERT INTO localidad VALUES (2262 , 'Santo Tomás Quierí',12Tamazulápam del E5,051329);
+INSERT INTO localidad VALUES (2262 , 'Santo Tomás Quierí',125,051329);
 INSERT INTO localidad VALUES (3593 , 'La Soledad el Mapache',364,051404);
 INSERT INTO localidad VALUES (2261 , 'Santo Domingo Lachivitó',125,051329);
 INSERT INTO localidad VALUES (3592 , 'Cerro Iglesias',526,051404);
