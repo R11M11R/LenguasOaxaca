@@ -1,7 +1,8 @@
 <h1 class="page-header">Conoce las palabras</h1>
 
 <div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=palabra&a=Crud">Agregar Palabra</a>
+	<script src="../mvc/assets/js/funciones.js"></script>
+    <a class="btn btn-primary" id="boton_agregar_palabra" onclick="checkLoginState2('?c=palabra&a=Crud')">Agregar Palabra</a>
 </div>
 
 <table class="table table-striped">
