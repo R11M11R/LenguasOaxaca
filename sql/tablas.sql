@@ -1,6 +1,7 @@
 
 
 
+
 -- Volcando estructura de base de datos para lenguas
 CREATE DATABASE IF NOT EXISTS `lenguas` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `lenguas`;
@@ -54,19 +55,6 @@ DELETE FROM `familia_linguistica`;
 /*!40000 ALTER TABLE `familia_linguistica` DISABLE KEYS */;
 /*!40000 ALTER TABLE `familia_linguistica` ENABLE KEYS */;
 
--- Volcando estructura para tabla lenguas.imagen
-CREATE TABLE IF NOT EXISTS `imagen` (
-  `idimagen` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(60) NOT NULL,
-  `descripcion` varchar(1000) NOT NULL,
-  PRIMARY KEY (`idimagen`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Volcando datos para la tabla lenguas.imagen: ~0 rows (aproximadamente)
-DELETE FROM `imagen`;
-/*!40000 ALTER TABLE `imagen` DISABLE KEYS */;
-/*!40000 ALTER TABLE `imagen` ENABLE KEYS */;
-
 -- Volcando estructura para tabla lenguas.localidad
 CREATE TABLE IF NOT EXISTS `localidad` (
   `clave` int(11) NOT NULL,
@@ -99,10 +87,10 @@ CREATE TABLE IF NOT EXISTS `palabras` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `escritura` varchar(60) DEFAULT NULL,
   `pronunciacion` varchar(60) DEFAULT NULL,
+  `ruta_imagen` varchar(100) NOT NULL,
   `id_localidad` int(11) NOT NULL,
   `id_clasificacion` int(11) NOT NULL,
   `id_significado` int(11) NOT NULL,
-  `id_imagen` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -133,12 +121,6 @@ CREATE TABLE IF NOT EXISTS `variante_linguistica` (
 
 -- Volcando datos para la tabla lenguas.variante_linguistica: ~0 rows (aproximadamente)
 DELETE FROM `variante_linguistica`;
-/*!40000 ALTER TABLE `variante_linguistica` DISABLE KEYS */;
-/*!40000 ALTER TABLE `variante_linguistica` ENABLE KEYS */;
-
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 
 
 
